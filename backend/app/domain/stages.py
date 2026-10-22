@@ -1,0 +1,68 @@
+"""The eight-stage call framework used by both storage adapters."""
+
+STAGES: list[dict] = [
+    {
+        "stage_number": 1,
+        "name": "Opening",
+        "purpose": "Reach the right person and introduce yourself clearly.",
+        "talk_track": "Ask for the person by name, then introduce yourself in one calm sentence.",
+        "response_patterns": ["A gatekeeper asks what the call is about", "The prospect is busy", "The contact is incorrect or outdated"],
+        "outcome_options": ["Reached the prospect", "Gatekeeper answered", "Wrong contact", "Prospect unavailable", "Other"],
+    },
+    {
+        "stage_number": 2,
+        "name": "Purpose",
+        "purpose": "Explain why you are calling in one or two concise sentences.",
+        "talk_track": "Connect the reason for your call to a relevant business topic. Keep it brief and factual.",
+        "response_patterns": ["Asks who is calling or what the call concerns", "Asks how you got their contact", "Asks about cost, intent, or what happens next"],
+        "outcome_options": ["Purpose understood", "Asked what the company does", "Asked how contact was obtained", "Identified this as a sales call", "Other"],
+    },
+    {
+        "stage_number": 3,
+        "name": "Permission",
+        "purpose": "Find out whether the prospect is willing to talk now.",
+        "talk_track": "Ask directly whether now is a good time. Treat anything other than a clear yes as uncertain.",
+        "response_patterns": ["Asks to speak at a different time", "Requests email or WhatsApp before deciding whether to continue", "The answer is vague or does not grant clear permission"],
+        "outcome_options": ["Agreed to continue", "Requested callback", "Requested written information", "Declined to continue", "Other"],
+    },
+    {
+        "stage_number": 4,
+        "name": "Their Business",
+        "purpose": "Understand the prospect's business before you discuss a solution.",
+        "talk_track": "Ask one open question about how the relevant part of their business works today.",
+        "response_patterns": ["Short answers", "The prospect corrects an assumption", "The prospect asks you to explain your offer first"],
+        "outcome_options": ["Shared business context", "Corrected an assumption", "Asked for the pitch first", "Limited response", "Other"],
+    },
+    {
+        "stage_number": 5,
+        "name": "Their Need, in Their Words",
+        "purpose": "Understand the prospect's goal or problem and keep their words intact.",
+        "talk_track": "Ask what they would most like to improve, then give them room to explain without interrupting.",
+        "response_patterns": ["A goal involving products, markets, customers, or growth", "A constraint involving people or capacity", "The prospect describes stable operations or no immediate need", "The prospect asks what you can offer before sharing more"],
+        "outcome_options": ["Identified a goal", "Described a problem", "No immediate need", "Asked what we can offer", "Other"],
+    },
+    {
+        "stage_number": 6,
+        "name": "Objection",
+        "purpose": "Understand the reason behind resistance without arguing.",
+        "talk_track": "Acknowledge what you heard, then ask one respectful question if they are open to explaining.",
+        "response_patterns": ["An existing internal team or outside provider", "Authority sits elsewhere or the contact is not the right person", "Questions about intent, price, or information handling", "A clear refusal or lack of need"],
+        "outcome_options": ["Existing provider or team", "Not the right person", "Asked for written information", "Not interested", "Other"],
+    },
+    {
+        "stage_number": 7,
+        "name": "Next Step",
+        "purpose": "Agree on one concrete action, time, or channel—or record that none was agreed.",
+        "talk_track": "If there is interest, suggest a small next step and confirm the details in the prospect's words.",
+        "response_patterns": ["An explicit callback or meeting is agreed", "Information is requested without a clear commitment", "A referral or alternative contact is offered"],
+        "outcome_options": ["Meeting agreed", "Callback agreed", "Information delivery agreed", "Referral provided", "No next step agreed", "Other"],
+    },
+    {
+        "stage_number": 8,
+        "name": "Close",
+        "purpose": "End clearly and make sure the outcome and next step are recorded accurately.",
+        "talk_track": "Summarize only what was agreed, confirm the channel or timing, and thank them for the conversation.",
+        "response_patterns": ["The call ends abruptly", "A polite ending without further interest", "The recorded outcome differs from what the prospect said"],
+        "outcome_options": ["Meeting booked", "Callback arranged", "Follow-up information agreed", "Not interested", "Conversation ended without a next step", "Other"],
+    },
+]
